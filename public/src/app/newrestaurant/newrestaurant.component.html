@@ -1,0 +1,20 @@
+<h1>Register a restaurant</h1>
+<p *ngFor='let err of errors' class="purple-text">{{ err }}</p>
+<div class="addform">
+    <form (submit)="createRestaurant()" #myForm="ngForm">
+      <table>
+        <tr>
+          <td>Restaurant Name:</td>
+          <td><input type="text" name="newRestaurant.name" required minlength="3" [(ngModel)]="newRestaurant.name" #newRestaurant.name="ngModel"></td>
+        </tr>
+        <tr>
+          <td>Cuisine:</td>
+          <td><input type="text" name="newRestaurant.cuisine" required minlength="3" [(ngModel)]="newRestaurant.cuisine" #newRestaurant.cuisine="ngModel"></td>
+        </tr>
+        <tr>
+            <td><button class="cancel" [routerLink]="['']">Cancel</button></td>
+            <td><input class="submit"  type="submit" value="Register"></td>
+        </tr>
+      </table>
+    </form>
+</div>

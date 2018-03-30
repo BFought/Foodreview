@@ -1,0 +1,27 @@
+.edit{
+    width: 50px;
+    background-color: #03a9f4;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 1px 1px grey;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.cancel{
+    width: 50px;
+    background-color: #d1c4e9;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px grey;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 80px;
+    color: white;
+}
+.purple-text{
+    color: purple;
+}

@@ -1,0 +1,45 @@
+For a red belt:
+
+    CRUD operations all working
+        Able to create new restaurants
+        All restaurants are displayed upon visiting the website
+        Able to leave reviews on each restaurant
+        User may choose a restaurant and see all its reviews
+        Able to edit each restaurant
+        Edit form is pre-populated with the restaurant’s existing data
+        Able to delete each restaurant
+    Routing
+        Root route displays all restaurants
+        Route ‘/new’ displays the form to create a new restaurant
+            Successful creation and cancel redirect to the root route
+        Route ‘/reviews/:id’ displays all the reviews of a particular restaurant
+        Route ‘/edit/:id’ displays the pre-populated form to edit a restaurant
+            Successful edit and cancel redirect to the root route
+        Route '/write/:id' displays the form to review a particular restaurant
+            Successful submission and cancel redirect to the restaurant's list of reviews
+    Backend validations
+        All restaurants must have names of at least 3 characters
+        All restaurants must have cuisines of at least 3 characters
+        Error messages inform the user if the restaurant's name or cuisine is not meeting requirements
+        Both on create and edit
+        All reviews must have the user's name of at least 3 characters
+        All reviews must have a description of at least 3 characters
+        All reviews must have a number of stars between 1 and 5
+        Error messages inform the user if the review is not meeting requirements
+        Error messages are custom-written (not the mongoose default messages)
+    HTML and CSS reflect the wireframe to at least 75% accuracy
+
+For a black belt:
+
+        Deployed, and not on Heroku
+        At least two of the following four features:
+            Each restaurant's delete button is only enabled if the root component is loaded within 30 seconds of the restaurant's creation. Note: This does NOT mean you should be able to watch the button change from enabled to disabled. An enabled button would switch to disabled only if the component is reloaded after the 30 seconds have passed.
+            Do not allow duplicate restaurant names in the database. Display an error message if the user attempts to create a restaurant with a name that already exists in the database.
+            Nest the edit component so it appears alongside the list of restaurants without requiring routing. Upon successful submission or clicking cancel, have the edit component disappear from view.
+            Sort the reviews by their stars in descending order so the highest rated restaurants are at the top.
+Also:
+    Create a short video walking through the features of your app. Show your validations working. There is no need to speak or show your code.
+        Remove your github repo after deploying.
+    The wireframe is available for download here.
+Don’t worry about:
+    What the prompts are asking for. Just ask if you are unsure about what the goals are!

@@ -1,0 +1,30 @@
+<h1 *ngIf='restaurant'>Write a review for {{ restaurant.name}}</h1>
+<p *ngFor='let err of errors' class="purple-text">{{ err }}</p>
+<div class="addform">
+    <form *ngIf='restaurant' (submit)="createReview(restaurant._id)" #myForm="ngForm">
+      <table>
+        <tr>
+          <td>Your Name:</td>
+          <td><input type="text" name="newReview.name" required minlength="3" [(ngModel)]="newReview.name" #newReview.name="ngModel"></td>
+        </tr>
+        <tr>
+            <td>Stars:</td>
+            <td><select class="" name="newReview.star" required [(ngModel)]="newReview.star" #newReview.star="ngModel">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></td>
+        </tr>
+        <tr>
+          <td>Your Review:</td>
+          <td><input type="text" name="newReview.review" required minlength="3" [(ngModel)]="newReview.review" #newReview.review="ngModel"></td>
+        </tr>
+        <tr>
+            <td><input class="submit"  type="submit" value="Submit"></td>
+            <td><button class="cancel" [routerLink]="['/reviews/', restaurant._id]">Cancel</button></td>
+        </tr>
+      </table>
+    </form>
+</div>
